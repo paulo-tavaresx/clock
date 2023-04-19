@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
+:root {
+  --clockBG: #d1d1d1;
+  --fontColor: black;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,9 +34,9 @@ body {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: 3px solid black;
+  border: 3px solid var(--fontColor);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  background-color: #d1d1d1;
+  background-color: var(--clockBG);
   position: relative;
 }
 
@@ -42,7 +47,7 @@ body {
   top: 50%;
   width: 6px;
   height: 40%;
-  background-color: black;
+  background-color: var(--fontColor);
   border-radius: 10px;
   transform: translateX(-50%) rotate(var(--rotation));
   transform-origin: top;
@@ -53,7 +58,7 @@ body {
   top: 50%;
   width: 15px;
   height: 15px;
-  background-color: black;
+  background-color: var(--fontColor);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
@@ -88,7 +93,7 @@ body {
   height: 100px;
   gap: 15px;
   border-radius: 15px;
-  background-color: #d1d1d1;
+  background-color: var(--clockBG);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
