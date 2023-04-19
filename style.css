@@ -41,26 +41,26 @@ body {
 }
 
 .clock .hand {
-  --rotation: 0deg;
+  --rotation: 180deg;
   position: absolute;
   left: 50%;
-  top: 50%;
+  bottom: 50%;
   width: 6px;
   height: 40%;
   background-color: var(--fontColor);
   border-radius: 10px;
   transform: translateX(-50%) rotate(var(--rotation));
-  transform-origin: top;
+  transform-origin: bottom;
 }
 .clock .circle {
   position: absolute;
   left: 50%;
-  top: 50%;
+  bottom: 50%;
   width: 15px;
   height: 15px;
   background-color: var(--fontColor);
   border-radius: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
   z-index: 10;
 }
 
@@ -82,6 +82,7 @@ body {
   font-size: 1.6rem;
   text-align: center;
   transform: rotate(var(--rotation));
+  user-select: none;
 }
 
 .digitalClock {

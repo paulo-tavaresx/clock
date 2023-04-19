@@ -15,13 +15,13 @@ function updateClockHands({ hours, minutes, seconds }) {
   const secondHand = document.querySelector('.secondHand')
 
   const rotateForHour = 360 / 12
-  const angleHour = hours * rotateForHour + 180
+  const angleHour = hours * rotateForHour
 
   const rotateForMinute = 360 / 60
-  const angleMinute = minutes * rotateForMinute + 180
+  const angleMinute = minutes * rotateForMinute
 
-  const rotateForSecond = 360 / 60
-  const angleSecond = seconds * rotateForSecond + 180
+  const rotateForSecond = 360 / 60 // 6
+  const angleSecond = seconds * rotateForSecond
 
   hourHand.style.setProperty('--rotation', `${angleHour}deg`)
   minuteHand.style.setProperty('--rotation', `${angleMinute}deg`)
@@ -42,6 +42,5 @@ const hourMarkers = document.querySelectorAll('.marker')
 
 hourMarkers.forEach((marker) => {
   const markerNumber = marker.getAttribute('data-marker')
-  console.log(markerNumber)
   marker.style.setProperty('--rotation', `${markerNumber * (360 / 12)}deg`)
 })

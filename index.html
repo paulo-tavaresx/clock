@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Clock</title>
   </head>
   <body>
-    <div class="clock">
+    <div class="clock" data-aos="fade-down">
       <div class="hand hourHand"></div>
       <div class="hand minuteHand"></div>
       <div class="hand secondHand"></div>
@@ -28,7 +29,7 @@
       <div class="marker" data-marker="11">XI</div>
       <div class="marker" data-marker="12">XII</div>
     </div>
-    <div class="digitalClock">
+    <div class="digitalClock" data-aos="fade-up">
       <span class="hours">00</span>
       <span class="separator">:</span>
       <span class="minutes">00</span>
@@ -36,5 +37,9 @@
       <span class="seconds">00</span>
     </div>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init()
+    </script>
   </body>
 </html>
